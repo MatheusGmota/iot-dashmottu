@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Matheus",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 6.6, "left": 98.8, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -23.96, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 86.3,
+      "left": 147.5,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 86.3,
+      "left": 243.5,
+      "rotate": 90,
+      "attrs": { "color": "blue", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 86.3,
+      "left": 329.9,
+      "rotate": 90,
+      "attrs": { "color": "red", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:GND.2", "bb1:tn.1", "black", [ "v0" ] ],
+    [ "bb1:tn.25", "bb1:bn.25", "black", [ "v0" ] ],
+    [ "bb1:27b.j", "bb1:bn.22", "black", [ "v38.4" ] ],
+    [ "btn2:1.l", "bb1:18t.c", "", [ "$bb" ] ],
+    [ "btn2:2.l", "bb1:16t.c", "", [ "$bb" ] ],
+    [ "btn2:1.r", "bb1:18b.h", "", [ "$bb" ] ],
+    [ "btn2:2.r", "bb1:16b.h", "", [ "$bb" ] ],
+    [ "btn3:1.l", "bb1:27t.c", "", [ "$bb" ] ],
+    [ "btn3:2.l", "bb1:25t.c", "", [ "$bb" ] ],
+    [ "btn3:1.r", "bb1:27b.h", "", [ "$bb" ] ],
+    [ "btn3:2.r", "bb1:25b.h", "", [ "$bb" ] ],
+    [ "bb1:18b.j", "bb1:bn.15", "black", [ "v0" ] ],
+    [ "btn1:1.l", "bb1:8t.c", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:6t.c", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:8b.h", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:6b.h", "", [ "$bb" ] ],
+    [ "bb1:8b.j", "bb1:bn.6", "black", [ "v0" ] ],
+    [ "bb1:6b.j", "esp:2", "green", [ "v0" ] ],
+    [ "bb1:16b.i", "esp:4", "blue", [ "h-172.8", "v-9.6" ] ],
+    [ "bb1:25b.i", "esp:5", "red", [ "v67.2", "h-268.8", "v-105.6" ] ]
+  ],
+  "dependencies": {}
+}
